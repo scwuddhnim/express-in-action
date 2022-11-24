@@ -57,3 +57,32 @@
 
 - **3.5 Example: putting it all together in a guestbook**
   - [example](./src/ch3/guestbook): guestbook app gồm home page và một page cho phép thêm các guestbook entry
+
+## Chapter 4: Middleware
+
+- **4.1 Middleware and the middleware stack**
+  - giới thiệu về nguyên lý hoạt động của middleware stack
+
+- **4.2 Example app: a static file server**
+  - [example](./src/ch4/static-file): middleware stack của application này: logger, static file và 404 handler
+
+- **4.2.1 Getting set up**
+  - dựng Node.js project và cài đặt các dependency
+
+- **4.2.2 Writing your first middleware function: the logger**
+  - viết logger middleware với 2 case: gọi `next()` và không gọi `next()`
+
+- **4.2.3 The static file server middleware**
+  - static file middleware: cung cấp file nếu file đó tồn tại, không thì nhảy qua middleware tiếp theo
+
+- **4.2.4 404 handler middleware**
+  - 404 handler middleware: nếu không tìm thấy file sẽ ném ra error này
+
+- **4.2.5 Switching your logger to an open source one: Morgan**
+  - sử dụng Morgan library để thay thế cho logger middleware đã viết trước đó
+
+- **4.2.6 Switching to Express’s built-in static file middleware**
+  - sử dụng static middleware của Express để thay thế cho static file middleware đã viết trước đó
+
+- **4.3 Error-handling middleware**
+  - [example](./src/ch4/error-handling-middleware): giới thiệu về error-handling middleware: là các middleware gồm 4 tham số
